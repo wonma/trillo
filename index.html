@@ -26,6 +26,7 @@
                 </form>
 
                 <nav class="user-nav">
+                    <!-- Tag -->    
                     <div class="user-nav__icon-box">
                         <svg class="user-nav__icon">
                             <use xlink:href="img/sprite.svg#icon-bookmark"></use>
@@ -33,8 +34,10 @@
                         <span class="user-nav__notification">
                             7
                         </span>
-                    </div>    
-                    <div class="user-nav__icon-box">
+                    </div>  
+
+                    <!-- Message -->      
+                    <div class="user-nav__icon-box user-nav__chatbox">
                         <svg class="user-nav__icon">
                             <use xlink:href="img/sprite.svg#icon-chat"></use>
                         </svg>
@@ -42,11 +45,122 @@
                             13
                         </span>                        
                     </div>  
+
+                    <!-- Dropdown Message  -->  
+                    <div class="user-nav__message">
+                        <ul class="user-nav__message-list">
+                            <li class="user-nav__message-item">
+                                <a href="#" class="user-nav__message-link">
+                                    <img src="img/user-1.jpg" alt="user photo" class="user-nav__message-photo">
+                                    <div class="user-nav__message-user">
+                                        <span class="user-nav__message-user--name">Joshua</span>
+                                        <p class="user-nav__message-user--talk">
+                                        Are you interested in Seafood? Here...
+                                        </p>
+                                    </div>
+                                    <p class="user-nav__message-time">
+                                        2 days ago
+                                    </p>
+                                </a>
+                            </li>
+
+                             <li class="user-nav__message-item">
+                                <a href="#" class="user-nav__message-link">
+                                    <img src="img/user-2.jpg" alt="user photo" class="user-nav__message-photo">
+                                    <div class="user-nav__message-user">
+                                        <span class="user-nav__message-user--name">Sunny</span>
+                                        <p class="user-nav__message-user--talk">
+                                        Thanks for sharing your opinion.
+                                        </p>
+                                    </div>
+                                    <p class="user-nav__message-time">
+                                        3 days ago
+                                    </p>
+                                </a>
+                            </li>
+                            <li class="user-nav__message-item">
+                                <a href="#" class="user-nav__message-link">
+                                    <img src="img/user-3.jpg" alt="user photo" class="user-nav__message-photo">
+                                    <div class="user-nav__message-user">
+                                        <span class="user-nav__message-user--name">Thomas</span>
+                                        <p class="user-nav__message-user--talk">
+                                        Hi please contact me if you need ..
+                                        </p>
+                                    </div>
+                                    <p class="user-nav__message-time">
+                                        1 week ago
+                                    </p>
+                                </a>
+                            </li>   
+                            <li class="user-nav__message-item user-nav__goto-menu">
+                                <a href="#" class="user-nav__message-goto user-nav__message-goto--new">
+                                    <span>New message</span>
+                                </a>
+                                <a href="#" class="user-nav__message-goto user-nav__message-goto--all">
+                                    <span>View all</span>
+                                </a>
+                            </li>                       
+                        </ul>
+                        <div class="user-nav__popover-arrow user-nav__popover-arrow--right-big"></div>
+                    </div>
+
+                    <!-- User Info -->            
                     <div class="user-nav__user">
                         <img src="img/user.jpg" alt="User Photo" class="user-nav__user-photo">
                         <span class="user-nav__user-name">Woshmi</span>
-                    </div>                      
+                    </div>     
+                    
+                    <!-- Dropdown User Info  -->  
+                    <div class="user-nav__dropdown">
+                        <ul class="user-nav__dropdown-list">
+                            <li class="user-nav__dropdown-item">
+                                <a href="#" class="user-nav__dropdown-link">
+                                    <svg class="user-nav__dropdown-icon">
+                                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                                    </svg>
+                                    <span>Favorites</span>
+                                </a>
+                            </li>
+                            <li class="user-nav__dropdown-item">
+                                <a href="#" class="user-nav__dropdown-link">
+                                    <svg class="user-nav__dropdown-icon">
+                                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                                    </svg>
+                                    <span>Reservation</span>
+                                </a>
+                            </li>
+                            <li class="user-nav__separator"> </li>
+                            <li class="user-nav__dropdown-item">
+                                <a href="#" class="user-nav__dropdown-link">
+                                    <svg class="user-nav__dropdown-icon">
+                                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                                    </svg>
+                                    <span>Profile</span>
+                                </a>
+                            </li>    
+                            <li class="user-nav__dropdown-item">
+                                <a href="#" class="user-nav__dropdown-link">
+                                    <svg class="user-nav__dropdown-icon">
+                                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                                    </svg>
+                                    <span>Settings</span>
+                                </a>
+                            </li>        
+                            <li class="user-nav__dropdown-item">
+                                <a href="#" class="user-nav__dropdown-link">
+                                    <svg class="user-nav__dropdown-icon">
+                                        <use xlink:href="img/sprite.svg#icon-magnifying-glass"></use>
+                                    </svg>
+                                    <span>Log out</span>
+                                </a>
+                            </li>                    
+                        </ul>
+                        <div class="user-nav__popover-arrow user-nav__popover-arrow--right-small"></div>
+                    </div>
+
                 </nav>
+               
+
 
             </header>
 
@@ -98,12 +212,15 @@
                     <div class="gallery">
                         <figure class="gallery__item">
                             <img src="img/hotel-1.jpg" alt="Photo of hotel 1" class="gallery__photo">
+                            <figcaption class="gallery__caption">Pool at night</figcaption>
                         </figure>
                         <figure class="gallery__item">
                             <img src="img/hotel-2.jpg" alt="Photo of hotel 2" class="gallery__photo">
+                            <figcaption class="gallery__caption">Nice view</figcaption>
                         </figure>
                         <figure class="gallery__item">
                             <img src="img/hotel-3.jpg" alt="Photo of hotel 3" class="gallery__photo">
+                            <figcaption class="gallery__caption">Sightseeing spots</figcaption>
                         </figure>
                     </div>
 
