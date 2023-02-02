@@ -1,0 +1,27 @@
+.bullet-list {
+    margin: 3rem 0;
+    padding: 3rem 0;
+    border-top: 1px solid var(--col-light-grey-2);
+    border-bottom: 1px solid var(--col-light-grey-2);
+
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+
+    &__item {
+        flex: 0 0 50%;
+        margin: .5rem 0;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: "";
+            width: 1.5rem;
+            height: 1.5rem;
+            position: absolute;
+            background-color: var(--col-primary);
+            mask-image: url(/app/assets/img/chevron-thin-right.svg);
+        }
+    }
+}

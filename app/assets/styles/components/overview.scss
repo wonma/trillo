@@ -1,0 +1,58 @@
+.overview {
+    height: 6.5rem;
+    display: flex;
+    background-color: #ffffff;
+    align-items: center;
+    justify-content: space-between;
+
+    &__title {
+        font-size: 2.6rem;
+        margin-left: 3rem;
+        font-weight: 300;
+    }
+
+    &__stars {
+        display: flex;
+        margin-left: 2rem;
+        margin-right: auto;
+    }
+
+    &__icon-star {
+        width: 1.5rem;
+        height: 1.5rem;
+        fill: var(--col-primary);
+    }
+
+    &__location {
+        color: var(--col-primary);
+        margin-right: 2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    &__icon-location {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: .6rem;
+        fill: currentColor;
+    }
+
+    &__rating {
+        background-color: var(--col-primary);
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: var(--col-light-grey-1);
+        padding: 0 1.6rem;
+    }
+
+    &__rating-number {
+        font-size: 2rem;
+    }
+
+    &__rating-votes {
+        font-size: 1.2rem;
+    }
+}

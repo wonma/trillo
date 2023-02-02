@@ -1,0 +1,46 @@
+.gallery {
+    display: flex;
+    
+    &__img-box {
+        position: relative;
+
+        &:hover {
+            .gallery__figcaption {
+                opacity: 90%;
+            }
+
+            .gallery__figcaption > span {
+                color: var(--col-light-grey-1);
+                transform: translateY(0);
+            }
+        }
+    }
+
+    &__img {
+        display: block;
+        position: relative;
+    }
+
+    &__figcaption {
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        padding: 1.5rem;
+        background-image: linear-gradient(to bottom, transparent, #000);
+        opacity: 50%;
+        transition: opacity .3s;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        & > span {
+            text-align: right;
+          font-size: 1.4rem;
+          color: transparent;
+          transform: translateY(-1rem);
+          transition: all .2s;
+        }
+    }
+}

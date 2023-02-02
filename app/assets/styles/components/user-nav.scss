@@ -1,0 +1,57 @@
+.user-nav {
+    display: flex;
+    align-self: stretch;
+    color: var(--col-dark-grey-2);
+
+    & > * {
+        transition: background-color .2s;
+        &:hover {
+            background-color: var(--col-light-grey-1);
+            cursor: pointer;
+        }
+    }
+
+    &__icon-box {
+        padding: 0 2rem;
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    &__icon {
+        width: 1.75rem;
+        height: 1.75rem;
+        fill: currentColor;
+    }
+
+    &__notification {
+        position: absolute;
+        width: 1.75rem;
+        height: 1.75rem;
+        border-radius: 50%;
+        background-color: var(--col-primary);
+        top: 1.5rem;
+        left: 2.75rem;
+        font-size: 1rem;
+        color: #ffffff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__user {
+        display: flex;
+        align-items: center;
+        padding: 0 2rem;
+    }
+
+    &__user-photo {
+        height: 3.5rem;
+        border-radius: 50%;;
+    }
+
+    &__user-name {
+        margin-left: 1rem;
+        font-size: 1.4rem;
+    }
+}
