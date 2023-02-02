@@ -9,7 +9,9 @@ const config = {
     entry: './app/assets/scripts/App.js',
     plugins: [new HtmlWebpackPlugin({
         filename: 'index.html',
-        template: './app/index.html'
+        template: './app/index.html',
+        minify: false,
+        inject: 'body'
     })],
     module: {
         rules: [
