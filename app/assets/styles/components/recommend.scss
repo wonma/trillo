@@ -1,3 +1,40 @@
 .recommend {
-    
+    display: flex;
+    font-size: 1.4rem;
+    justify-content: space-between;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-small) {
+        flex-wrap: wrap;
+    }
+
+    &__message {
+        margin-right: 2rem;
+        flex: 1;
+        @media only screen and (max-width: $bp-small) {
+            flex: 1 1 100%;
+            margin-right: 0;
+        }
+    }
+
+    &__users {
+        display: flex;
+        margin-left: -1rem;
+        @media only screen and (max-width: $bp-small) {
+            margin-left: 0;
+            margin-top: 1rem;
+        }
+    }
+
+    &__user-photo {
+        display: inline-block;
+        box-sizing: content-box;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        border: 3px solid var(--col-light-grey-1);
+        &:not(:first-of-type) {
+            margin-left: -1rem;
+        }
+    }
 }

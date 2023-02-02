@@ -2,24 +2,38 @@
     flex: 0 0 40%;
     display: flex;
     align-items: center;
+    position: relative;
+    
+    @media only screen and (max-width: $bp-smallest) {
+        order: 1;
+        flex-basis: calc(100% - 1.5rem);
+        margin-top: 1rem;
+    }
 
     &__input {
         width: 90%;
+
         height: 1.5rem;
         padding: .8rem 1.25rem;
         border-radius: 10rem;
         border: none;
-        transition: width .2s;
-        background-color: var(--col-light-grey-1);
+        background-color: var(--col-light-grey-2);
         color:  var(--col-dark-grey-2);
+        transition: width .2s;
 
         &:focus {
-          outline: none;
-          width: 100%;  
+            width: 100%;
+            outline: none;
         }
 
         &::placeholder {
             color: var(--col-dark-grey-1);
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            flex: 1 1 100%;
+            border-radius: 0;
+            height: 2.75rem;
         }
     }
 
@@ -28,11 +42,15 @@
         width: 1.5rem;
         background-color: transparent;
         border: none;
-        margin-left: -2.5rem;
         color: var(--col-dark-grey-1);
+        margin-left: -3rem;
 
         &:hover {
             cursor: pointer;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            
         }
     }
 

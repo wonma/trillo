@@ -1,7 +1,12 @@
 .main-nav {
     list-style: none;
     margin-top: 3rem;
-
+    @media only screen and (max-width: $bp-medium) {
+        margin-top: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    
     &__item {
         position: relative;
 
@@ -15,13 +20,22 @@
             transform: scaleY(0);
             background-color: var(--col-primary);
             transition: transform .2s,
-                        width .4s .2s;
+                        width .4s .2s,
+                        background-color .3s;
             transform-origin: center;
         }
 
         &:hover::before {
             transform: scaleY(1);
             width: 100%;
+        }
+
+        &:active::before {
+            background-color: var(--col-primary-light);
+        }
+
+        @media only screen and (max-width: $bp-medium) {
+            flex: 1;
         }
     }
 
@@ -37,6 +51,17 @@
         text-transform: uppercase;
         display: flex;
         align-items: center;
+
+        @media only screen and (max-width: $bp-medium) {
+            justify-content: center;
+            padding: 2rem 3rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            flex-direction: column;
+            padding: 2rem 1rem 1rem;
+            font-size: 1.2rem;
+        }
     }
 
     &__icon {
@@ -44,6 +69,10 @@
         height: 1.5rem;
         margin-right: 1.6rem;
         fill: currentColor;
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 0;
+            margin-bottom: .5rem;
+        }
     }
 }
 
@@ -52,6 +81,9 @@
     color: var(--col-light-grey-3);
     font-size: 1.2rem;
     margin-bottom: 3rem;
+    @media only screen and (max-width: $bp-medium) {
+        display: none;
+    }
 
     & > p {
         padding: 1rem 1.5rem;

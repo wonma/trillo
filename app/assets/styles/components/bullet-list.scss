@@ -3,6 +3,7 @@
     padding: 3rem 0;
     border-top: 1px solid var(--col-light-grey-2);
     border-bottom: 1px solid var(--col-light-grey-2);
+    font-size: 1.4rem;
 
     display: flex;
     flex-wrap: wrap;
@@ -14,14 +15,18 @@
         position: relative;
         display: flex;
         align-items: center;
+        @media only screen and (max-width: $bp-small) {
+            flex: 0 0 100%;
+        }
 
         &::before {
-            content: "";
-            width: 1.5rem;
-            height: 1.5rem;
-            position: absolute;
-            background-color: var(--col-primary);
-            mask-image: url(/app/assets/img/chevron-thin-right.svg);
+            content: "\2219";
+            display: inline-block;
+            margin-right: .5rem;
+            width: 1rem;
+            height: 1rem;
+            margin-top: -1rem;
+            color: var(--col-primary);
         }
     }
 }
